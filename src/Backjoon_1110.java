@@ -10,6 +10,7 @@ public class Backjoon_1110 {
             num2=result;
         }
         System.out.println(count);
+
         sc.close();
     }
 }

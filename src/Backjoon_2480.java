@@ -18,5 +18,7 @@ public class Backjoon_2480 {
         else if(arr[0]==arr[2]) System.out.println(1000+arr[0]*100);
         else if(arr[1]==arr[2]) System.out.println(1000+arr[1]*100);
         else System.out.println(100*max);
+
+        sc.close();
     }
 }
