@@ -14,6 +14,7 @@ public class Backjoon_2562 {
             }
         }
         System.out.println(max+" "+(count+1));
+
         sc.close();
     }
 }
