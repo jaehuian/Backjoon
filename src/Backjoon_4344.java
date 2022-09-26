@@ -22,5 +22,7 @@ public class Backjoon_4344 {
             }
             System.out.println(String.format("%.3f",(percent/student_count)*100)+"%");
         }
+
+        sc.close();
     }
 }

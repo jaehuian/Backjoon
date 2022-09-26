@@ -19,5 +19,7 @@ public class Backjoon_15596 {
             a.add(sc.nextInt());
         }
         System.out.println(sum(a.stream().mapToInt(x->x).toArray()));
+
+        sc.close();
     }
 }
