@@ -5,5 +5,6 @@ public class Backjoon_11654 {
         Scanner sc=new Scanner(System.in);
 
         System.out.println((int)sc.nextLine().charAt(0));
+        sc.close();
     }
 }
