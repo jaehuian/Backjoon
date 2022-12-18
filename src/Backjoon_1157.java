@@ -1,31 +1,27 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Backjoon_1157 {
     public static void main(String[] args) throws Exception{
-        Scanner sc= new Scanner(System.in);
-        String s = sc.nextLine().toUpperCase();
-        int count=0,maxc=-1;
-        char result=0;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s = br.readLine().toUpperCase();
+        int[] alpha = new int[26];
+        int max=0;
+        char result=' ';
         boolean overlap=false;
 
-        for(char i='A';i<='Z';i++){
-            count=0;
-            for(int j=0;j<s.length();j++){
-                if(s.charAt(j)==i) count++;
-            }
-            if(maxc<count&&count!=0){
-                maxc=count;
-                result=i;
-                
-                if(overlap==true) overlap=false;
-            }
-            else if(maxc==count){
+        for(char c:s.toCharArray()){
+            if(max<++alpha[c-'A']){
+                max=alpha[c-'A'];
+                result=c;
                 overlap=true;
             }
+            else if(max==alpha[c-'A']){
+                overlap=false;
+            }
         }
-        if(overlap==false) System.out.println(result);
-        else System.out.println("?");
+        if(overlap==false) System.out.println("?");
+        else System.out.println(result);
 
-        sc.close();
     }
 }
